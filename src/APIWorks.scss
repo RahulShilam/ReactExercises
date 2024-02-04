@@ -1,0 +1,74 @@
+.api-works {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5%;
+  .flip-card {
+    border: 1px solid grey;
+    // this is the color of the background while flipping the fornt and back
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    // for 3d effect
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2%;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 0.8s; /* speed of the flip - 10s is super slow */
+    // The transition CSS property is a shorthand property for transition-property,
+    //  transition-duration, transition-timing-function, transition-delay, and transition-behavior.
+    /* property name | duration | easing function | delay */
+    // transition: margin-right 4s ease-in-out 1s;
+    /* property name | duration | behavior */
+    // transition: display 4s allow-discrete;
+    transform-style: preserve-3d;
+    // transform-style When applied to an element, it specifies that the
+    // child elements of the element should be rendered in a 3D space.
+    // eg: .parent-container {
+    //   transform-style: preserve-3d;
+    // }
+    // .child-element {
+    //   transform: translateZ(50px);
+    // }
+  }
+
+  // the below css means that when a user hovers over an element with
+  // class .flip-card the child element with class .flip-card-inner
+  // will undergo a 3D transformation causing it to rotate Y axis by 180 degrees.
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  // The CSS below is defining styles
+  // for both the front and back faces of a flip card.
+  .flip-card-front,
+  .flip-card-back {
+    // Absolute positioning allows the elements to be taken out of the normal document flow
+    // and positioned based on their nearest positioned ancestor.
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // This property is used to control whether or not the back
+    // face of an element is visible when facing away from the
+    // viewer in a 3D space. Setting it to hidden ensures that
+    //  the back face is not visible when the flip card is facing
+    //  away from the viewer. This is important for achieving a
+    //  clean flip effect without the back face being visible during the animation.
+    backface-visibility: hidden;
+  }
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: black;
+    transform: rotateY(180deg);
+  }
+}

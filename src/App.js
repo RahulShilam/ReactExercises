@@ -4,6 +4,7 @@ import PlaceTextAtCenter from "./PlaceTextAtCenter";
 import ControlledAndUncotrolledCompo from "./ControlledAndUncotrolledComp";
 import HackerRank from "./HackerRank";
 import APIWork from "./APIWork";
+import HackerRankCSS from "./HackerRankCSS";
 
 function App() {
   //Enable this function when enabling <Button Component
@@ -37,7 +38,11 @@ function App() {
 
       {/* How API's work both fetch and AXIOS*/}
       {/* How to do a Flip Card */}
-      <APIWork />
+      {/* <APIWork /> */}
+
+      {/* create an animation that doubles it's size on hover and
+       the animation should happen for 500ms */}
+      <HackerRankCSS />
     </>
   );
 }

@@ -1,0 +1,78 @@
+.hacker-rank-css {
+  //   color: red;
+  .greyBall {
+    height: 50px;
+    width: 50px;
+    background: #3ba59b;
+    border-radius: 50%;
+    margin: 5%;
+  }
+  .greyBall:hover {
+    transform: scale(2);
+
+    transition: 0.5s;
+    //transition:0.5s and transition:500ms are both same.
+    //   transition: 500ms transform; is setting up a transition effect
+    //   on the transform property over a duration of 500 milliseconds.
+    //   transition: 500ms transform;
+    //transform property is commonly used for various transformations,
+    //such as rotations, translations, and scaling.
+
+    background: red;
+  }
+
+  .truncate-ellipsis {
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    overflow: hidden; /* Hides the overflowing content */
+    text-overflow: ellipsis; /* Displays an ellipsis (...) when the text overflows */
+    width: 200px; /* Set the allocated width for the element */
+  }
+
+  #tagid {
+    color: blue;
+  }
+  p {
+    color: red !important;
+  }
+
+  .prevent-selection {
+    user-select: none;
+  }
+
+  input::placeholder {
+    // color: transparent;
+    visibility: hidden;
+  }
+
+  //first way to keep text at center
+  .parent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .child {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  //second way
+  //   .parent {
+  //     width: 100vw;
+  //     height: 100vh;
+  //     position: relative;
+  //     .child {
+  //       height: 100px;
+  //       width: 100px;
+  //       position: absolute;
+  //       top: 50%;
+  //       left: 50%;
+  //     }
+  //   }
+
+  .heroWorld {
+    // vertical-align: 25px;
+    vertical-align: -25px;
+    vertical-align: text-bottom;
+  }
+}
